@@ -1,0 +1,8 @@
+.nextflow*
+ariba_output
+work
+fastqs
+bams
+ariba.Dockerfile
+*.backup
+
