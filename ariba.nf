@@ -131,7 +131,7 @@ if (params.bam_pattern) {
 }
 
  process run_ariba {
-   publishDir "${output_dir}", mode: 'copy'
+   publishDir output_dir, mode: 'copy'
 
    input:
    set pair_id, file(file_pair)  from read_pairs
@@ -148,7 +148,7 @@ if (params.bam_pattern) {
  }
 
 process run_ariba_summary {
-  publishDir "${output_dir}/summary", mode: 'copy'
+  publishDir output_dir, mode: 'copy'
 
   input:
   file summary_tsv from summary_channel.collect()
